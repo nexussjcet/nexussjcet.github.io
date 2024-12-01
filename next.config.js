@@ -4,8 +4,11 @@
  */
 
 // await import("./env.js");
+import { withMDX } from "./lib/mdx.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+    pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+};
 
-export default config;
+export default withMDX(config)
