@@ -46,7 +46,7 @@ export default function FlexLayout() {
 				</div>
 
 				{/* Column 2 */}
-				<div className="flex flex-col w-1/5 border border-yellow-500 justify-between">
+				<div className="flex flex-col w-1/5   justify-between">
 					<div className="box-left mt-20 md:mt-4 w-[15vw] ml-4 md:-ml-14 md-w-[20vw]">
 						<Image
 							src="/projects/speaker.webp"
@@ -93,7 +93,7 @@ export default function FlexLayout() {
 				</div>
 
 				{/* Column 3 */}
-				<div className="flex flex-col w-1/5 border border-red-500 justify-between h-screen overflow-visible">
+				<div className="flex flex-col w-1/5   justify-between h-screen overflow-visible">
 					<div className="w-[60vw] md:w-[30vw] lg:w-[40vw] ">
 						<Image
 							src="/projects/sketches.png"
@@ -115,7 +115,7 @@ export default function FlexLayout() {
 				</div>
 
 				{/* Column 4 */}
-				<div className="flex flex-col w-1/5 border border-green-500 justify-between h-screen overflow-visible">
+				<div className="flex flex-col w-1/5  justify-between h-screen overflow-visible">
 					<div>
 						<Image
 							src="/projects/cable.webp"
@@ -160,7 +160,7 @@ export default function FlexLayout() {
 				</div>
 
 				{/* Column 5 */}
-				<div className="flex flex-col w-1/5 border border-purple-500 h-screen justify-between overflow-visible items-end">
+				<div className="flex flex-col w-1/5  h-screen justify-between overflow-visible items-end">
 					<div className="z-30 w-[50vw] md:w-[30vw] lg:w-[20vw]">
 						<Image
 							src="/projects/lamp.webp"
