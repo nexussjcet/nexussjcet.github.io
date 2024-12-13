@@ -33,19 +33,19 @@ export default function RegisterPage() {
 				width={150}
 				height={150}
 				alt="College Logo"
-				className="mx-auto w-32 h-32 sm:w-48 sm:h-48 object-contain "
+				className="mx-auto w-32 h-32 sm:w-48 sm:h-48 object-contain md:-mt-9 "
 			/>
-			<div className="w-full flex flex-col gap-3 justify-center items-center">
-				<Text variant="projects" size={"h2"} coloring={"projects-white"}>
+			<div className="w-full flex flex-col gap-3 justify-center items-center mt-40 md:mt-0 ">
+				<Text variant="projects" size={"h2"} coloring={"projects-white"} className="text-[.8rem]">
 					build <span className="underline decoration-white">real</span>{" "}
 					projects,
 				</Text>
-				<Text variant="projects" size={"h2"} coloring={"projects-white"}>
+				<Text variant="projects" size={"h2"} coloring={"projects-white"} className="text-[.8rem]">
 					prove you're an{" "}
 					<span className="underline decoration-white">engineer</span>.
 				</Text>
 				<Link href={"/projects/submit"}>
-					<Button className="scale-150 mt-10" variant={"projects"}>
+					<Button className="scale-75 md:scale-150 md:mt-10" variant={"projects"}>
 						<span className="text-lg">showcase your work</span>
 						<ChevronRight />
 					</Button>

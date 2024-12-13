@@ -3,13 +3,13 @@ import Image from "next/image";
 export default function ProjectMat() {
 	return (
 		
-		<div className="relative h-[35vh] w-[65vw]  rounded-lg drop-shadow-xl">
+		<div className="flex items-center justify-center  rounded-lg drop-shadow-xl md:w-[70vw]">
 			<Image
 				src={"/projects/tablemat.webp"}
 				width={1280}
 				height={720}
 				alt="logo"
-				className="absolute md:top-[0%] top-1/2 -mt-14 z-10  object-cover rounded-lg"
+				className="  z-10  object-cover rounded-lg object-center lg:w-[80vw]  sm:w-full"
 			/>
 			
 		</div>

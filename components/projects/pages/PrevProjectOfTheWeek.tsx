@@ -79,7 +79,7 @@ export const PrevProjectOfTheWeek = React.forwardRef<HTMLDivElement>(
 		return (
 			<div
 				ref={ref}
-				className="relative flex min-h-screen w-full items-center justify-center overflow-hidden font-semibold text-gray-700 text-lg"
+				className="relative flex min-h-screen w-full items-center justify-center overflow-hidden font-semibold text-gray-700 text-lg z-50"
 			>
 				<div className="z-10 flex w-full flex-wrap items-center justify-center gap-6">
 					{projects.map((project, index) => (

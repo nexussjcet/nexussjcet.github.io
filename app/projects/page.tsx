@@ -1,4 +1,5 @@
 "use client";
+import FlexLayout from "@/components/projects/FlexLayout";
 import ProjectMat from "@/components/projects/ProjectMat";
 import { PrevProjectOfTheWeek } from "@/components/projects/pages/PrevProjectOfTheWeek";
 import { ProjectOfTheWeek } from "@/components/projects/pages/ProjectOfTheWeek";
@@ -23,7 +24,7 @@ export default function Page() {
 			id: "hero",
 			position: { x: 0.5, y: 0.5 },
 			rotation: 0,
-			scale: 0.9,
+			scale: 0.8,
 		},
 		{
 			id: "secondSection",
@@ -47,7 +48,7 @@ export default function Page() {
 			id: "fourthSection",
 			position: { x: 0.5, y: 0.5 },
 			rotation: 0,
-			scale: 1.0,
+			scale: 0.8,
 		},
 	];
 
@@ -172,204 +173,41 @@ export default function Page() {
 	}, []);
 
 	return (
-		<div className="relative min-h-screen w-full bg-[#eaeaec]">
+		<div className="relative min-h-screen w-full bg-[#f3f5f9]">
 			{/* Animated Edge-Aligned Boxes */}
-			<div className="pointer-events-none fixed inset-0 z-50">
-				{/* Left Edge Boxes */}
-				<div className="box-left absolute top-0 left-0 w-1/4 drop-shadow-xl transition-transform md:w-auto sm:w-1/3">
-					<Image
-						src="/projects/board4.webp"
-						width={300}
-						height={300}
-						alt="Board 4"
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="box-left absolute bottom-0 left-0 w-1/5 drop-shadow-xl transition-transform md:w-auto sm:w-1/4">
-					<Image
-						src="/projects/speaker.webp"
-						width={200}
-						height={200}
-						alt="Speaker"
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="box-left absolute top-0 left-[20%] w-1/5 drop-shadow-xl transition-transform md:w-auto sm:w-1/4">
-					<Image
-						src="/projects/speaker.webp"
-						width={200}
-						height={200}
-						alt="Speaker"
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="box-left absolute top-[10%] left-0 w-1/3 drop-shadow-xl transition-transform md:w-auto sm:w-2/5">
-					<Image
-						src="/projects/notepad2.webp"
-						width={400}
-						height={400}
-						alt="Notepad 2"
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="box-left absolute top-[70%] left-[30%] w-1/5 drop-shadow-xl transition-transform md:w-auto sm:w-1/4">
-					<Image
-						src="/projects/board3.webp"
-						width={200}
-						height={200}
-						alt="Board 3"
-						className="h-auto w-full"
-					/>
-				</div>
-
-				{/* Top Edge Boxes */}
-				<div className="box-top absolute top-0 left-[50%] z-10 w-1/3 drop-shadow-xl transition-transform md:w-auto sm:w-2/5">
-					<Image
-						src="/projects/env.webp"
-						width={400}
-						height={400}
-						alt="Envelope"
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="box-top absolute top-[-20%] left-[50%] w-1/3 drop-shadow-xl transition-transform md:w-auto sm:w-2/5">
-					<Image
-						src="/projects/sketches.webp"
-						width={400}
-						height={400}
-						alt="Sketches"
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="box-top absolute top-0 left-[70%] w-1/4 drop-shadow-xl transition-transform md:w-auto sm:w-1/3">
-					<Image
-						src="/projects/cable.webp"
-						width={300}
-						height={300}
-						alt="Cable"
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="box-top absolute top-[5%] right-0 w-1/4 drop-shadow-xl transition-transform md:w-auto sm:w-1/3">
-					<Image
-						src="/projects/notepad1.webp"
-						width={300}
-						height={300}
-						alt="Notepad 1"
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="box-top absolute top-0 right-0 z-10 w-1/4 drop-shadow-xl transition-transform md:w-auto sm:w-1/3">
-					<Image
-						src="/projects/lamp.webp"
-						width={300}
-						height={300}
-						alt="Lamp"
-						className="w-full h-auto"
-					/>
-				</div>
-				<div className="absolute top-0 right-0 z-0 transition-transform drop-shadow-xl box-top w-1/4 sm:w-1/3 md:w-auto">
-					<Image
-						src="/projects/rectangle 40319.webp"
-						width={300}
-						height={300}
-						alt="Rectangle"
-						className="w-full h-auto"
-					/>
-				</div>
-
-				{/* Right Edge Boxes */}
-				<div className="absolute top-[40%] right-0 transition-transform drop-shadow-xl box-right w-1/5 sm:w-1/4 md:w-auto">
-					<Image
-						src="/projects/volt.webp"
-						width={250}
-						height={250}
-						alt="Volt"
-						className="w-full h-auto"
-					/>
-				</div>
-				<div className="absolute bottom-[10%] left-[90%] transition-transform drop-shadow-xl box-top w-1/12 sm:w-1/10 md:w-auto">
-					<Image
-						src="/projects/board1.webp"
-						width={100}
-						height={100}
-						alt="Board 1"
-						className="w-full h-auto"
-					/>
-				</div>
-				<div className="absolute bottom-[14%] left-[90%] transition-transform drop-shadow-xl rotate-45 box-top w-1/12 sm:w-1/10 md:w-auto">
-					<Image
-						src="/projects/board1.webp"
-						width={100}
-						height={100}
-						alt="Board 1"
-						className="w-full h-auto"
-					/>
-				</div>
-
-				{/* Bottom Edge Boxes */}
-				<div className="absolute bottom-0 right-[10%] transition-transform drop-shadow-xl box-bottom w-1/3 sm:w-2/5 md:w-auto">
-					<Image
-						src="/projects/gears.webp"
-						width={400}
-						height={400}
-						alt="Gears"
-						className="w-full h-auto"
-					/>
-				</div>
-				<div className="absolute bottom-0 left-[40%] transition-transform drop-shadow-xl box-bottom w-2/5 sm:w-1/2 md:w-auto">
-					<Image
-						src="/projects/notepad4.webp"
-						width={500}
-						height={500}
-						alt="Notepad 4"
-						className="w-full h-auto"
-					/>
-				</div>
-				<div className="absolute bottom-0 left-[35%] transition-transform drop-shadow-xl box-bottom w-1/5 sm:w-1/4 md:w-auto">
-					<Image
-						src="/projects/solderingiron.webp"
-						width={200}
-						height={200}
-						alt="Soldering Iron"
-						className="w-full h-auto"
-					/>
-				</div>
+			<div className="pointer-events-none fixed inset-0 z-30 ">
+				<FlexLayout/>
 			</div>
 
 			{/* Main Content */}
-			<div className="relative h-auto overflow-hidden bg-[#eaeaec] z-0">
+			<div className="relative h-auto overflow-hidden bg-[#f3f5f9] z-0">
 				<div
-					className="relative flex h-screen w-full items-center justify-center z-10"
+					className="relative flex  w-full items-center justify-center z-30"
 					ref={projectMatRef}
 				>
 					<ProjectMat />
 				</div>
 
-				<div ref={heroRef} className="relative h-screen w-full bg-[#eaeaec]">
-					<div className="absolute bg-blend-multiply z-0">
+				<div ref={heroRef} className="relative min-h-screen w-full ">
+					<div className="absolute  z-20 w-screen h-screen ">
 						<Image
-							src={"/projects/shadow.png"}
-							className="opacity-20"
+							src={"/projects/shadow.webp"}
+							className="opacity-100 bg-blend-overlay"
 							width={1920}
 							height={1080}
 							alt="logo"
 							priority
+						
 						/>
 					</div>
-					<div className="absolute top-1/2 md:top-1/2   md:mt-9 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 text-2xl md:text-6xl lg:text-7xl font-bold text-white text-center flex items-start flex-col justify-start">
-						<Image
-							src="/projects/nexus-tag.webp"
-							width={400}
-							height={400}
-							alt="Nexus Sticky"
-							className="-mt-12 sm:-mt-48 mx-auto w-32 h-32 sm:w-96 sm:h-96 scale-50 -right-56 -bottom-56  object-contain absolute"
-						/>
+					<div className="absolute top-1/2 md:top-1/2 lg:mt-4 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 text-2xl md:text-6xl lg:text-7xl font-bold text-white text-center flex items-start flex-col justify-start ">
+					
 						<Image
 							src={"/projects/logo.svg"}
 							width={350}
 							height={350}
 							alt="logo"
+							className="w-[30vw] md:w-[30vw] lg:w-[20vw]"
 							// className="w-6 h-6 sm:w-5 sm:h-5 md:w-12 md:h-12 lg:w-14 lg:h-14"
 						/>
 					</div>
@@ -377,7 +215,7 @@ export default function Page() {
 
 				<div
 					ref={nextSectionRef}
-					className="flex min-h-screen w-full items-center justify-center bg-[#eaeaec]"
+					className="flex min-h-screen w-full items-center justify-center  z-4 bg-transparent0"
 				>
 					<ProjectOfTheWeek />
 				</div>
