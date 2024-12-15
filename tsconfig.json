@@ -22,6 +22,7 @@
     "jsx": "preserve",
     "plugins": [{ "name": "next" }],
     "incremental": true,
+    "allowImportingTsExtensions": true,
 
     /* Path Aliases */
     "baseUrl": ".",
@@ -37,5 +38,5 @@
     "**/*.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "./server", "./trpc", "./future/api"],
+  "exclude": ["node_modules", "./server", "./trpc", "./future/api"]
 }
