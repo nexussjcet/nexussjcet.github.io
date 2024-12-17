@@ -1,12 +1,27 @@
 "use client";
+
 import { PrevProjectOfTheWeek } from "@/components/projects/pages/PrevProjectOfTheWeek";
-import { ProjectOfTheWeek } from "@/components/projects/pages/ProjectOfTheWeek";
+import ProjectOfTheWeek  from "@/components/projects/pages/ProjectOfTheWeek";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
+
+
+const sampleProject = {
+	title: "Thekkummoottil Advanced Auth Solutions",
+	image: "/projects/demoproject.jpg?height=400&width=600&text=AI+Chat+App",
+	deployedUrl: "https://www.youtube.com/watch?v=GzeAQlSxVvc",
+	description: "You have an app, but no secure authentication? You have a smartphone, but no secure authentication? I have ready for you. For the last 4 years, we have been serving the tech community in SJCET.We have several dedicated employees working 24 hours a day. We use technology. We have computer background staff. From the non-tech community to tech communities, we have 100% customer satisfaction. Reliable and dependable services, all over the united SJCET. Satisfaction guaranteed and definitely.",
+	author: {
+	  name: "Awindsr",
+	  githubUsername: "awindsr"
+	},
+	technologies: ["Next.js", "React", "TypeScript", "OpenAI API", "Tailwind CSS"],
+	rating: 5
+  };
 
 
 export default function Page(){
@@ -286,8 +301,9 @@ export default function Page(){
 				</div>
 				<a href="/projects/submit" className="relative bg-gradient-to-b from-neutral-700 to-black text-white px-4 p-2 rounded-full z-50">showcase your project!</a>
 			</div>
-			<div className="py-6 z-50 bg-neutral-100">
-				<ProjectOfTheWeek/>
+			<div className="py-6 z-50 bg-neutral-100 min-h-screen flex justify-center items-center">
+				{/* <ProjectOfTheWeek/> */}
+				<ProjectOfTheWeek project={sampleProject}/>
 			</div>
 			<div className="py-6 z-50 bg-neutral-100">
 				<PrevProjectOfTheWeek/>
