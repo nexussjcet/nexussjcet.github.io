@@ -57,19 +57,21 @@ export default function Home() {
   }
 
   return (
-    <div className="relative h-auto w-screen">
+    <div className="relative h-auto w-screen flex gap-10 flex-col justify-end">
       <GridPattern
         width={50}
         height={50}
         strokeDasharray="5,5"
-        className="absolute inset-0"
+        className="absolute inset-0 z-0"
       />
       {/* Navbar visible only on md screens and above */}
-      <div className="hidden md:block">
+      <div className="hidden md:block w-1/4 mr-10">
         <Navbar
           scrollToSection={scrollToSection} // Pass the function as a prop
         />
       </div>
+      <div>
+
       <div ref={heroRef}>
         <Hero />
       </div>
@@ -78,13 +80,14 @@ export default function Home() {
           <section ref={historyRef}>
             <History />
           </section>
-          <section ref={eventsRef}>
+          <section ref={eventsRef} className="max-w-full">
             <EventsPage />
           </section>
-          <section className="hidden" ref={teamsRef}>
+          <section className="w-full" ref={teamsRef} >
             <TeamsPage />
           </section>        
         </div>
+      </div>
       </div>
     </div>
   );

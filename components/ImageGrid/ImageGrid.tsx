@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 
 // Define the type for each history item
 interface HistoryItem {
@@ -13,8 +14,8 @@ interface HistoryItem {
 const history: HistoryItem[] = [
     {
         id: 1,
-        title: "Formation & Inauguration",
-        description: "Swatanthra was inaugurated by Richard Stallman.",
+        title: "Swathanthra Group",
+        description: "The Swathanthra Group was inaugurated in 2010 by Richard Stallman to promote Free Software ideals.",
         images: [
             './richard stallman-1.png',
             './richard stallman-2.png',
@@ -23,35 +24,43 @@ const history: HistoryItem[] = [
     },
     {
         id: 2,
-        title: "ICFOSS Events",
-        description: "Swatanthra conducted FOSS week with ICFOSS.",
+        title: "Mozilla Campus Club",
+        description: "The Mozilla Campus Club at SJCET was established in 2013 to advocate for open web technologies.",
         images: [
-            './richard stallman-1.png',
-            './richard stallman-2.png',
+            '/history/swathanthra/mozilla_sjcet_logo.png',
         ],
-        date: 'June 2018',
+        date: '2013',
     },
     {
         id: 3,
-        title: "Abraham & his Legacy",
-        description: "Swatanthra conducted FOSS week with ICFOSS.",
+        title: "ICFOSS Events",
+        description: "The ICFOSS Cell at SJCET was established in 2018 to engage students in global FOSS initiatives.",
         images: [
-           './richard stallman-1.png',
-            './richard stallman-2.png',
+            '/history/swathanthra/ICFOSS_logo.jpeg',
         ],
         date: 'June 2018',
     },
     {
         id: 4,
-        title: "Legacy of Contributions",
-        description: "Celebrating the contributions of Abraham.",
+        title: "Abraham & His Legacy",
+        description: "Abraham Raji laid the foundation for a thriving open-source culture at SJCET in 2018.",
         images: [
-            './richard stallman-1.png',
-            './richard stallman-2.png',
+            '/history/swathanthra/abrahamraji.jpg',
         ],
-        date: 'June 2018',
+        date: 'Nov 2018',
+    },
+    {
+        id: 5,
+        title: "The Nexus Project",
+        description: "The Nexus Project was established to unite and support FOSS-related activities at SJCET.",
+        images: [
+            '/history/swathanthra/the_nexus_project_logo.jpeg',
+        ],
+        date: 'Dec 2018',
     },
 ];
+
+
 
 // Define the props type for ImageGridItem
 interface ImageGridItemProps extends HistoryItem {
@@ -61,7 +70,7 @@ interface ImageGridItemProps extends HistoryItem {
 // ImageGrid component
 const ImageGrid: React.FC = () => {
     return (
-        <div className="md:w-[75vw] w-full h-auto justify-center md:justify-end text-white flex flex-wrap ">
+        <div className="md:w-[90vw] w-full h-auto justify-center md:justify-end text-white flex flex-wrap ">
             {history.map((item) => (
                 <ImageGridItem key={item.id} {...item} isHovered={false} />
             ))}
@@ -75,7 +84,7 @@ const ImageGridItem: React.FC<ImageGridItemProps> = ({ title, description, image
 
     return (
         <div
-            className={`relative m-2 h-screen w-screen md:w-[15vw]  transition-all duration-300 ease-in-out transform pointer-events-none md:pointer-events-auto ${
+            className={`relative md:m-2 h-screen w-screen md:w-[15vw] flex-col md:flex-row transition-all duration-300 ease-in-out transform pointer-events-none md:pointer-events-auto ${
                 isHovered ? "flex-grow" : "flex-shrink"
             } text-[#AAAAAA] font-bold text-2xl p-2`}
             onMouseEnter={() => setIsHovered(true)}
@@ -92,7 +101,7 @@ const ImageGridItem: React.FC<ImageGridItemProps> = ({ title, description, image
                         <p className="text-2xl text-white mb-2 transition-all duration-300 ease-in-out transform">{description}</p>
                         <div className="flex flex-col items-center gap-2 justify-center">
                             {images.map((img, index) => (
-                                <img key={index} src={img} alt={`additional-${index}`} className={`h-[30vh] w-[100vw] object-cover transition-all duration-300 ease-in-out transform ${index === 1 ? "md:mt-[-2rem] md:mr-[10rem]" : ""}`} />
+                                <img key={index} src={img} alt={`additional-${index}`} className={`h-[30vh] w-[100vw] object-contain transition-all duration-300 ease-in-out transform ${index === 1 ? "md:mt-[-2rem] md:mr-[10rem]" : ""}`} />
                             ))}
                         </div>
                     </div>
@@ -101,11 +110,11 @@ const ImageGridItem: React.FC<ImageGridItemProps> = ({ title, description, image
 
                 </div>
                 {isHovered && (
-                    <div className="hidden md:flex flex-col  h-full w-[15vw] items-center justify-between  mt-4 transition-all duration-300 ease-in-out transform">
+                    <div className="hidden md:flex flex-col  h-full w-[20vw] items-center justify-between  mt-4 transition-all duration-300 ease-in-out transform">
                         <p className="text-2xl text-white mb-2 transition-all duration-300 ease-in-out transform">{description}</p>
                         <div className="flex flex-col items-center space-y-2 mt-2">
                             {images.map((img, index) => (
-                                <img key={index} src={img} alt={`additional-${index}`} className={`h-[30vh] w-[30vh] object-cover transition-all duration-300 ease-in-out transform ${index === 1 ? "mt-[-2rem] mr-[-10rem]" : ""}`} />
+                                <img key={index} src={img} alt={`additional-${index}`} className={`h-[30vh] w-[30vh] object-contain transition-all duration-300 ease-in-out transform ${index === 1 ? "mt-[-2rem] mr-[-10rem]" : ""}`} />
                             ))}
                         </div>
                         <p className="text-3xl mt-4 text-gray-400">{date}</p>
