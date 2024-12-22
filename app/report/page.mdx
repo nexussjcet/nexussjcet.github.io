@@ -1,0 +1,159 @@
+import { Button } from '@/components/ui/button'
+
+export const metadata = {
+	title: "Page title",
+	description: "Page Description",
+};
+
+# Welcome to my MDX page!
+ 
+This is some **bold** and _italics_ text.
+ 
+This is a list in markdown:
+ 
+- One
+- Two
+- Three
+ 
+Checkout my React component:
+ 
+<Button size="lg" variant="fossday">
+	<span className="text-xl text-red-400">Register Now</span>
+</Button>
+
+# Pluto
+
+**Pluto** (minor-planet designation: *134340 Pluto*)
+is a
+[dwarf planet](https://en.wikipedia.org/wiki/Dwarf_planet)
+in the
+[Kuiper belt](https://en.wikipedia.org/wiki/Kuiper_belt).
+
+## History
+
+In the 1840s,
+[Urbain Le Verrier](https://wikipedia.org/wiki/Urbain_Le_Verrier)
+used Newtonian mechanics to predict the position of the
+then-undiscovered planet
+[Neptune](https://wikipedia.org/wiki/Neptune)
+after analyzing perturbations in the orbit of
+[Uranus](https://wikipedia.org/wiki/Uranus).
+
+***
+
+Just a link: www.nasa.gov.
+
+* Lists
+* [ ] todo
+* [x] done
+
+A table:
+
+| a | b | b | a | b | b |
+| - | - | - | - | - | - |
+| x | y | y | x | y | y |
+| - | - | - | - | - | - |
+| x | y | y | x | y | y |
+
+<details>
+<summary>Show example</summary>
+
+```js
+console.log('Hi pluto!')
+```
+</details>
+
+```typescript highlight={1} filename="app/page.tsx" switcher
+import rehypeFormat from 'rehype-format'
+import rehypeHighlight from 'rehype-highlight'
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeStringify from 'rehype-stringify'
+import remarkDirective from 'remark-directive'
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+// import rehypeRaw from 'rehype-raw'
+// import rehypeSanitize from 'rehype-sanitize'
+// import remarkPrism from 'remark-prism'
+
+import createMDX from '@next/mdx'
+
+export const withMDX = createMDX({
+    options: {
+        remarkPlugins: [
+            remarkDirective,
+            remarkFrontmatter,
+            remarkGfm,
+            remarkMath,
+            remarkParse,
+            remarkRehype,
+            // remarkPrism
+        ],
+        rehypePlugins: [
+            rehypeFormat,
+            // rehypeRaw,
+            rehypeHighlight,
+            rehypePrettyCode,
+            // rehypeSanitize,
+            rehypeStringify,
+        ],
+    },
+})
+```
+
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+
+Here's our logo (hover to see the title text):
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style: 
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+Inline `code` has `back-ticks around` it.
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+
+
+Some references:
+
+*   Commit: f8083175fe890cbf14f41d0a06e7aa35d4989587
+*   Commit (fork): foo@f8083175fe890cbf14f41d0a06e7aa35d4989587
+*   Commit (repo): remarkjs/remark@e1aa9f6c02de18b9459b7d269712bcb50183ce89
+*   Issue or PR (`#`): #1
+*   Issue or PR (`GH-`): GH-1
+*   Issue or PR (fork): foo#1
+*   Issue or PR (project): remarkjs/remark#1
+*   Mention: @wooorm
