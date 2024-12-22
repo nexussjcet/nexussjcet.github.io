@@ -8,7 +8,17 @@ import { withMDX } from "./lib/mdx.js";
 
 /** @type {import("next").NextConfig} */
 const config = {
+    images: {
+        remotePatterns: [
+          {
+            protocol: "https",
+            hostname: "**",
+          },
+        ],
+      },
+
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+
 };
 
 export default withMDX(config)
