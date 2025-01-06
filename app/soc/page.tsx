@@ -51,7 +51,7 @@ export default function Page() {
                         By joining Season of Commits, you'll gain hands-on experience in open source development, build connections with like-minded contributors, and enhance your coding and collaboration skills. You'll also have the opportunity to grow your portfolio, increasing your chances of being hired.
                     </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="1">
+                <AccordionItem value="5">
                     <AccordionTrigger>Do I need to know how to code?</AccordionTrigger>
                     <AccordionContent>
                         No! While code contributions are the best way to contribute, there is also a need of designers, technical writers(people who write documentation) and beta testers(People who test the project and report issues.)
