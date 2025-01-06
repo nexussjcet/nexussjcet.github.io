@@ -24,7 +24,14 @@ export default function Page() {
                 <Button className="rounded-full bg-green-900 hover:bg-green-700">Get started</Button>
             </Link>
         </div>
-        <div className="flex flex-col p-10 w-full bg-white text-black">
+        <div className="flex flex-col gap-4 p-10 w-full bg-white text-black">
+            <h1 className="text-xl font-bold">Projects you can contribute to</h1>
+            <Link href="https://github.com/nexussjcet/nexussjcet.github.io" className="underline">
+                The Nexus Website
+            </Link>
+            <Link href="https://github.com/nexussjcet/nexus-spaces" className="underline">
+                Nexus Spaces - AI driven social media for SJCET
+            </Link>
             <h1 className="text-xl font-bold">Frequently Asked Questions</h1>
             <Accordion type="single" collapsible className="md:w-1/2">
                 <AccordionItem value="1">
@@ -55,6 +62,12 @@ export default function Page() {
                     <AccordionTrigger>Do I need to know how to code?</AccordionTrigger>
                     <AccordionContent>
                         No! While code contributions are the best way to contribute, there is also a need of designers, technical writers(people who write documentation) and beta testers(People who test the project and report issues.)
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="5">
+                    <AccordionTrigger>What should I work on?</AccordionTrigger>
+                    <AccordionContent>
+                        Look for unsolved issues in the issues tab, or create a new issue with the "question" label if you have something specific in mind.
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>
