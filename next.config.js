@@ -9,5 +9,8 @@ import { withMDX } from "./lib/mdx.js";
 /** @type {import("next").NextConfig} */
 export default withMDX({
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-  output: "export"
+  output: "export",
+  images: {
+    unoptimized: true
+  }
 });
