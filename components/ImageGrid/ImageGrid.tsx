@@ -18,7 +18,7 @@ const history: HistoryItem[] = [
         description: "The Swathanthra Group was inaugurated in 2010 by Richard Stallman to promote Free Software ideals.",
         images: [
             './richard stallman-1.png',
-            './richard stallman-2.png',
+            // './richard stallman-2.png',
         ],
         date: 'Sep 2010',
     },
@@ -27,7 +27,7 @@ const history: HistoryItem[] = [
         title: "Mozilla Campus Club",
         description: "The Mozilla Campus Club at SJCET was established in 2013 to advocate for open web technologies.",
         images: [
-            '/history/swathanthra/mozilla_sjcet_logo.png',
+            '/history/mozilla_sjcet_logo.png',
         ],
         date: '2013',
     },
@@ -36,7 +36,7 @@ const history: HistoryItem[] = [
         title: "ICFOSS Events",
         description: "The ICFOSS Cell at SJCET was established in 2018 to engage students in global FOSS initiatives.",
         images: [
-            '/history/swathanthra/ICFOSS_logo.jpeg',
+            '/history/ICFOSS_logo.jpeg',
         ],
         date: 'June 2018',
     },
@@ -45,7 +45,7 @@ const history: HistoryItem[] = [
         title: "Abraham & His Legacy",
         description: "Abraham Raji laid the foundation for a thriving open-source culture at SJCET in 2018.",
         images: [
-            '/history/swathanthra/abrahamraji.jpg',
+            '/history/abrahamraji.jpg',
         ],
         date: 'Nov 2018',
     },
@@ -54,7 +54,7 @@ const history: HistoryItem[] = [
         title: "The Nexus Project",
         description: "The Nexus Project was established to unite and support FOSS-related activities at SJCET.",
         images: [
-            '/history/swathanthra/the_nexus_project_logo.jpeg',
+            '/history/the_nexus_project_logo.jpeg',
         ],
         date: 'Dec 2018',
     },

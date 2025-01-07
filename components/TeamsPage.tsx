@@ -4,38 +4,43 @@ const TeamsPage = () => {
 	const execom = [
 		{
 			name: "Milan Suman",
-			role: "Lead, FOSS Enthusiast",
+			role: "Lead",
 			image: "/team/member1.png",
 		},
 		{
+			name: "Aibel Bin Zacharia",
+			role: "Co-Lead",
+			image: "/team/member8.png",
+		},
+		{
 			name: "Andrea Tresa Tom",
-			role: "FOSS Enthusiast",
+			role: "Documentation Lead",
 			image: "/team/member2.png",
 		},
 		{
 			name: "Tom Titus",
-			role: "FOSS Enthusiast",
+			role: "Cyber Lead",
 			image: "/team/member3.png",
 		},
 		{
 			name: "AwinDas R",
-			role: "FOSS Enthusiast",
+			role: "Web Lead",
 			image: "/team/member4.png",
 		},
 		{
 			name: "Aravind Manoj",
-			role: "FOSS Enthusiast",
+			role: "Cyber Lead",
 			image: "/team/member5.png",
 		},
 		{
 			name: "Ajay Sharma",
-			role: "FOSS Enthusiast",
+			role: "Design Lead",
 			image: "/team/member6.png",
 		},
 		{
-			name: "Anders Hejlsberg",
-			role: "FOSS Enthusiast",
-			image: "/team/member1.png",
+			name: "Abin Thomas ",
+			role: "Frontend Dev",
+			image: "/team/member7.png",
 		},
 	];
 
@@ -44,21 +49,30 @@ const TeamsPage = () => {
             <h2 className="text-4xl font-bold text-white md:hidden block">Our Team</h2>
 			{/* Central Image */}
 			<div className="flex flex-col items-center justify-center">
-				<div className="rounded-full h-[22vh] w-[22vh] bg-white flex justify-center items-center">
-					<img
-						src={execom[0]?.image}
-						alt="teams"
-						className="h-[20vh] w-[20vh] object-fill rounded-full"
-					/>
-				</div>
-				<div className="text-center mt-4">
-					<h1 className="text-xl font-bold text-white">{execom[0]?.name}</h1>
-					<p className="text-lg text-white">{execom[0]?.role}</p>
-				</div>
+			<div className="flex flex-col items-center gap-10">
+				{execom.slice(0, 2).map((member, index) => (
+					<div className="flex flex-col items-center">
+						<div
+							key={index}
+							className="rounded-full h-[22vh] w-[22vh] bg-white flex justify-center items-center"
+						>
+							<img
+								src={member.image}
+								alt={member.name}
+								className="h-[20vh] w-[20vh] object-fill rounded-full"
+							/>
+						</div>
+						<div className="text-center mt-4">
+							<h1 className="text-xl font-bold text-white">{member.name}</h1>
+							<p className="text-lg text-white">{member.role}</p>
+						</div>
+					</div>
+				))}
+			</div>
 			</div>
 
 			<div className="flex flex-col items-center gap-10">
-				{execom.slice(1, 3).map((member, index) => (
+				{execom.slice(2, 4).map((member, index) => (
 					<div className="flex flex-col items-center">
 						<div
 							key={index}
@@ -80,7 +94,7 @@ const TeamsPage = () => {
 
 			{/* Right Column */}
 			<div className="flex flex-col items-center gap-10">
-				{execom.slice(3, 5).map((member, index) => (
+				{execom.slice(4, 6).map((member, index) => (
 					<div className="flex flex-col items-center">
 						<div
 							key={index}
@@ -100,7 +114,7 @@ const TeamsPage = () => {
 				))}
 			</div>
 			<div className="flex flex-col items-center gap-10">
-				{execom.slice(5, 6).map((member, index) => (
+				{execom.slice(6, 8).map((member, index) => (
 					<div className="flex flex-col items-center">
 						<div
 							key={index}
