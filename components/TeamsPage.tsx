@@ -5,42 +5,42 @@ const TeamsPage = () => {
 		{
 			name: "Milan Suman",
 			role: "Lead",
-			image: "/team/member1.png",
+			image: "/team/member1.webp",
 		},
 		{
 			name: "Aibel Bin Zacharia",
 			role: "Co-Lead",
-			image: "/team/member8.png",
+			image: "/team/member8.webp",
 		},
 		{
 			name: "Andrea Tresa Tom",
 			role: "Documentation Lead",
-			image: "/team/member2.png",
+			image: "/team/member2.webp",
 		},
 		{
 			name: "Tom Titus",
 			role: "Cyber Lead",
-			image: "/team/member3.png",
+			image: "/team/member3.webp",
 		},
 		{
 			name: "AwinDas R",
 			role: "Web Lead",
-			image: "/team/member4.png",
+			image: "/team/member4.webp",
 		},
 		{
 			name: "Aravind Manoj",
 			role: "Cyber Lead",
-			image: "/team/member5.png",
+			image: "/team/member5.webp",
 		},
 		{
 			name: "Ajay Sharma",
 			role: "Design Lead",
-			image: "/team/member6.png",
+			image: "/team/member6.webp",
 		},
 		{
 			name: "Abin Thomas ",
 			role: "Frontend Dev",
-			image: "/team/member7.png",
+			image: "/team/member7.webp",
 		},
 	];
 
