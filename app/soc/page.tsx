@@ -39,6 +39,9 @@ export default function Page() {
                 <Link href="https://github.com/nexussjcet/nexus-spaces" className="underline">
                     Nexus Spaces - AI driven social media for SJCET
                 </Link>
+                <Link href="https://github.com/alvin-dennis/Sjcet-Events" className="underline">
+                    SJCET Events - An event manager for SJCET
+                </Link>
                 <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline">
                     Want to be a maintainer? Let us know! (email: nexus@sjcetpalai.ac.in)
                 </Link>
