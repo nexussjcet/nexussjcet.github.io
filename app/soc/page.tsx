@@ -77,7 +77,7 @@ export default function Page() {
             return (
               <div
                 key={project.name}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col justify-between "
               >
                 <div className="p-6 ">
                   <div className="flex items-center space-x-4">
