@@ -77,9 +77,9 @@ export default function Page() {
             return (
               <div
                 key={project.name}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out"
+                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
               >
-                <div className="p-6">
+                <div className="p-6 ">
                   <div className="flex items-center space-x-4">
                     <div className={`${project.color} p-3 rounded-lg bg-gray-50`}>
                       <IconComponent size={24} />
@@ -95,9 +95,9 @@ export default function Page() {
                   </div>
                 </div>
                 
-                <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
+                <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 ">
                     <Link href ={project.link}>
-                  <button className="text-sm text-blue-600 hover:text-blue-800 font-medium">
+                  <button className="text-sm text-blue-600 hover:text-blue-800 font-medium ">
                     Github link →
                   </button>
                   </Link>
