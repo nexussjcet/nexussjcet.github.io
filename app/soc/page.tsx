@@ -1,9 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import ChatBot from '../../components/chat';
-
-
 import { Brain, BrainCircuit, CalendarDays, Code2, Palette, PanelTop, Rocket, Terminal } from 'lucide-react';
 import type { LucideIcon } from "lucide-react";
 
@@ -107,7 +106,7 @@ export default function Page() {
                 </Link>
             </div>
             <div className="flex flex-col w-full">
-            <ChatBot />
+                <ChatBot />
             </div>
         </div>
     </div>
