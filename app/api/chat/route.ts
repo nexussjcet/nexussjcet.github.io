@@ -8,6 +8,7 @@ const _res: Record<string,string>= {
     "what do i gain from this event?":"By joining Season of Commits, you'll gain hands-on experience in open source development, build connections with like-minded contributors, and enhance your coding and collaboration skills. You'll also have the opportunity to grow your portfolio, increasing your chances of being hired.",
     "Do i need to know how to code?":"No! While code contributions are the best way to contribute, there is also a need of designers, technical writers(people who write documentation) and beta testers(People who test the project and report issues.)",
     "What should i work on?":"Look for unsolved issues in the issues tab, or create a new issue with the \"question\" label if you have something specific in mind.",
+    "other help":"Mail us nexus@sjcetpalai.ac.in"
 
 };
 await new Promise(resolve => setTimeout(resolve,1000));
