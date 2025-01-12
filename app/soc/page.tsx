@@ -59,14 +59,14 @@ export default function Page() {
                 </Link>
             </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 p-10 w-full bg-white text-black">
+        <div className="flex flex-col gap-4 items-center justify-center p-10 w-full bg-white text-black">
             <div id="projects"></div>
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl flex flex-col items-center justify-center">
                 <h1 className="text-3xl font-bold text-gray-900 text-center mb-12">
                     Projects You Can Contribute To
                 </h1>
 
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                 <div className="grid place-items-center gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => {
                         const IconComponent = project.icon;
                         return (
@@ -100,7 +100,7 @@ export default function Page() {
                             </div>
                         );
                     })}
-                </div>
+                    </div>
                 <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8">
                     Want to be a maintainer? Let us know! (email: nexus@sjcetpalai.ac.in)
                 </Link>
