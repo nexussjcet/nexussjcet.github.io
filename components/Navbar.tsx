@@ -2,10 +2,24 @@ import type React from "react";
 import { useState, useEffect, useRef } from "react";
 
 interface NavbarProps {
-  scrollToSection: (section: "home" | "history" | "events" | "teams") => void;
+  scrollToSection: (section: "home" | "history" | "events" | "teams" | "about") => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
+  const labels = [
+    "Home",
+    "History",
+    "Events",
+    "Team",
+  ];
+  labels.push(...labels);
+  const descriptions = {
+    Home: "The homepage",
+    History: "How we started",
+    Events: "Events we have hosted",
+    Team: "Our members",
+  };
+  const axis = 360 / labels.length;
   const [rotation, setRotation] = useState(0);
   const lastScrollPos = useRef(0);
 
@@ -20,9 +34,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
       );
 
       if (scrolledSections > lastScrolledSections) {
-        setRotation((prevRotation) => prevRotation + 45);
+        setRotation((prevRotation) => prevRotation - axis);
       } else if (scrolledSections < lastScrolledSections) {
-        setRotation((prevRotation) => prevRotation - 45);
+        setRotation((prevRotation) => prevRotation + axis);
       }
 
       lastScrollPos.current = scrollPosition;
@@ -35,26 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
     };
   }, []);
 
-  const labels = [
-    "Home",
-    "History",
-    "Events",
-    "Team",
-    "Home",
-    "Team",
-    "Events",
-    "History",
-  ];
-  const descriptions = {
-    Home: "The homepage",
-    History: "How we started",
-    Events: "Events we have hosted",
-    Team: "Our members",
-  };
-
-  const activeLabelIndex =
-    Math.floor(((rotation / 45) % labels.length) + labels.length) %
-    labels.length;
+  const activeLabelIndex = labels.length - Math.floor(((rotation / axis) % labels.length) + labels.length);
   const activeLabel = labels[activeLabelIndex];
 
   const renderLabels = () => {
@@ -65,8 +60,6 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
       const x = radius * Math.cos((angle * Math.PI) / 180);
       const y = radius * Math.sin((angle * Math.PI) / 180);
       const description = descriptions[label as keyof typeof descriptions];
-
-
 
       const handleClick = () => {
         // Call scrollToSection only for recognized sections
@@ -79,7 +72,6 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
       return (
         <div
           key={index}
-          
           onClick={handleClick}
           style={{
             position: "absolute",
@@ -93,9 +85,8 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
             cursor: "pointer",
           }}>
           <div
-            className={`flex items-center justify-center gap-3 w-[20rem] h-[20rem] transition-transform duration-300 ${
-              label === activeLabel ? "scale-110 text-3xl" : "scale-100 text-xl"
-            }`}>
+            className={`flex items-center justify-center gap-3 w-[20rem] h-[20rem] transition-transform duration-300 ${label === activeLabel ? "scale-110 text-3xl" : "scale-100 text-xl"
+              }`}>
             <div className="w-6 h-6 bg-[#D9D9D9] rounded-full"></div>
             <div className="flex flex-col items-start">
               {label}
@@ -118,7 +109,6 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
   return (
     activeLabel !== "Home" && (
       <div
-      
         style={{
           width: "500px",
           height: "500px",
@@ -130,6 +120,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
           top: "20%",
           left: "-25%",
           transformOrigin: "center",
+          zIndex: 1000,
         }}>
         {renderLabels()}
       </div>
