@@ -1,8 +1,14 @@
-
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 import Link from "next/link";
-import ChatBot from '../../components/chat';
+
 import { Brain, BrainCircuit, CalendarDays, Code2, Palette, PanelTop, Rocket, Terminal } from 'lucide-react';
 import type { LucideIcon } from "lucide-react";
 
@@ -59,14 +65,14 @@ export default function Page() {
                 </Link>
             </div>
         </div>
-        <div className="flex flex-col gap-4 items-center justify-center p-10 w-full bg-white text-black">
+        <div className="flex flex-col md:flex-row gap-4 p-10 w-full bg-white text-black">
             <div id="projects"></div>
-            <div className="max-w-4xl flex flex-col items-center justify-center">
+            <div className="max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-gray-900 text-center mb-12">
                     Projects You Can Contribute To
                 </h1>
 
-                 <div className="grid place-items-center gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => {
                         const IconComponent = project.icon;
                         return (
@@ -100,13 +106,51 @@ export default function Page() {
                             </div>
                         );
                     })}
-                    </div>
+                </div>
                 <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8">
                     Want to be a maintainer? Let us know! (email: nexus@sjcetpalai.ac.in)
                 </Link>
             </div>
             <div className="flex flex-col w-full">
-                <ChatBot />
+                <h1 className="text-xl font-bold">Frequently Asked Questions</h1>
+                <Accordion type="single" collapsible>
+                    <AccordionItem value="1">
+                        <AccordionTrigger>What's this event about?</AccordionTrigger>
+                        <AccordionContent>
+                            Season of Commits is a month-long celebration of open-source contributions. Whether you're an experienced developer, a beginner looking to make your first pull request, or someone with a project to share, this event provides resources, mentorship, and a collaborative environment to help you succeed.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="2">
+                        <AccordionTrigger>Who can join?</AccordionTrigger>
+                        <AccordionContent>
+                            Anyone with an interest in coding, open source, or collaboration can join! Whether you're a student, professional, or hobbyist, there's a space for you. Beginners are especially encouraged to participate and explore the world of open source.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="3">
+                        <AccordionTrigger>Are there any prizes?</AccordionTrigger>
+                        <AccordionContent>
+                            Yes! Participants with the highest number of quality commits will be eligible for a cash prize of 2000 INR.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="4">
+                        <AccordionTrigger>What do I gain from this event?</AccordionTrigger>
+                        <AccordionContent>
+                            By joining Season of Commits, you'll gain hands-on experience in open source development, build connections with like-minded contributors, and enhance your coding and collaboration skills. You'll also have the opportunity to grow your portfolio, increasing your chances of being hired.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="5">
+                        <AccordionTrigger>Do I need to know how to code?</AccordionTrigger>
+                        <AccordionContent>
+                            No! While code contributions are the best way to contribute, there is also a need of designers, technical writers(people who write documentation) and beta testers(People who test the project and report issues.)
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="5">
+                        <AccordionTrigger>What should I work on?</AccordionTrigger>
+                        <AccordionContent>
+                            Look for unsolved issues in the issues tab, or create a new issue with the "question" label if you have something specific in mind.
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
             </div>
         </div>
     </div>
