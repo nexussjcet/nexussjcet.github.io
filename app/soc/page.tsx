@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Brain, BrainCircuit, CalendarDays, Code2, Palette, PanelTop, Rocket, Terminal } from 'lucide-react';
+import { BrainCircuit, CalendarDays, PanelTop, Send } from 'lucide-react';
 import type { LucideIcon } from "lucide-react";
 
 type Project = {
@@ -42,7 +42,13 @@ const projects: Project[] = [
         color: 'text-green-500',
         link: "https://github.com/alvin-dennis/Sjcet-Events"
     },
-
+    {
+        name: "Insight",
+        description: "An AI driven whatsapp bot for SJCET",
+        icon: Send,
+        color: "text-green-500",
+        link: "https://github.com/rajatsandeepsen/insight"
+    }
 ];
 
 export default function Page() {
@@ -65,7 +71,7 @@ export default function Page() {
                 </Link>
             </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 p-10 w-full bg-white text-black">
+        <div className="flex flex-col gap-4 p-10 w-full bg-white text-black">
             <div id="projects"></div>
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-gray-900 text-center mb-12">
