@@ -2,7 +2,7 @@ import type React from "react";
 import { useState, useEffect, useRef } from "react";
 
 interface NavbarProps {
-  scrollToSection: (section: "home" | "history" | "events" | "teams" | "about") => void;
+  scrollToSection: (section: "home" | "history" | "events" | "teams") => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
   const descriptions = {
     Home: "The homepage",
     History: "How we started",
-    Events: "Events we have hosted",
+    Events: "Events we hosted",
     Team: "Our members",
   };
   const axis = 360 / labels.length;
@@ -63,6 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
 
       const handleClick = () => {
         // Call scrollToSection only for recognized sections
+        console.log(label);
         if (label === "Home") scrollToSection("home");
         else if (label === "History") scrollToSection("history");
         else if (label === "Events") scrollToSection("events");
@@ -85,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
             cursor: "pointer",
           }}>
           <div
-            className={`flex items-center justify-center gap-3 w-[20rem] h-[20rem] transition-transform duration-300 ${label === activeLabel ? "scale-110 text-3xl" : "scale-100 text-xl"
+            className={`flex items-center justify-center gap-3 w-[15rem] transition-transform duration-300 ${label === activeLabel ? "scale-110 text-3xl" : "scale-100 text-xl"
               }`}>
             <div className="w-6 h-6 bg-[#D9D9D9] rounded-full"></div>
             <div className="flex flex-col items-start">
@@ -110,8 +111,10 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
     activeLabel !== "Home" && (
       <div
         style={{
-          width: "500px",
-          height: "500px",
+          width: "40vw",
+          height: "40vw",
+          maxWidth: "500px",
+          maxHeight: "500px",
           borderRadius: "50%",
           border: "2px solid #555555",
           transform: `rotate(${rotation}deg)`,
