@@ -51,7 +51,6 @@ function ChatBot() {
         type: 'bot',
         content: data.response
       }]);
-      console.log(data.response);
     } catch(error){
       console.error('Error:', error);
       setMessages(prev =>[...prev, {
@@ -71,7 +70,7 @@ function ChatBot() {
           <MessageCircle className="w-6 h-6" />
         </Button>
         <span className="text-sm font-medium text-blue-600 animate-pulse">
-          Get Support
+          FAQ
         </span>
       </div>
 
@@ -80,7 +79,7 @@ function ChatBot() {
           <Card>
             <CardContent className="p-0">
               <div className="flex justify-between items-center p-4 border-b">
-                <h3 className="font-semibold">Chat Support</h3>
+                <h3 className="font-semibold">Frequently Asked Questions</h3>
                 <Button 
                   variant="ghost" 
                   size="icon" 
@@ -92,7 +91,7 @@ function ChatBot() {
               </div>
 
               <div className="p-4">
-                <div className="h-52 md:h-96 overflow-y-auto mb-4 space-y-4 scroll-smooth">
+                <div className="h-52 md:h-60 overflow-y-auto mb-4 space-y-4 scroll-smooth">
                   {messages.map((message, index) => (
                     <div
                       key={index}
@@ -122,7 +121,7 @@ function ChatBot() {
                 </div>
 
                 <div className="space-y-2">
-                  <p className="text-sm text-gray-500 mb-2">Select a message:</p>
+                  <p className="text-sm text-gray-500 mb-2">Questions</p>
                   <div className="grid grid-cols-1 gap-2">
                     {msgss.map((message, index) => (
                       <Button
