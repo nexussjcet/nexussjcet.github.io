@@ -24,7 +24,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  const scrollToSection = (section: "home" | "history" | "events" | "teams" | "footer") => {
+  const scrollToSection = (section: "home" | "history" | "events" | "teams" | "footer" | "about") => {
     switch (section) {
       case "home":
         heroRef.current?.scrollIntoView({ behavior: "smooth" });
