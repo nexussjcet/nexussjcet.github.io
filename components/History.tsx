@@ -5,7 +5,7 @@ import RotatingCircle from "./Navbar";
 
 const History = () => {
   return (
-    <div className="h-auto w-full justify-center items-center flex ">
+    <div className="h-auto w-full justify-center items-center flex">
       <ImageGrid />
     </div>
   );

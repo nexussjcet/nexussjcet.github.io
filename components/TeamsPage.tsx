@@ -48,18 +48,18 @@ const TeamsPage = () => {
 		<div className="flex-col md:flex-row flex items-center justify-end min-h-screen w-[90vw] mx-auto sm:gap-[3vw] lg:gap-[4vw]">
 			<h2 className="text-4xl font-bold text-white md:hidden block">Our Team</h2>
 			{/* Section 1 */}
-			<div className="flex flex-col items-center justify-center">
+			<div className="flex flex-col items-center justify-center mt-10 md:mt-0">
 				<div className="flex flex-col items-center gap-10">
 					{execom.slice(0, 2).map((member, index) => (
-						<div className="flex flex-col items-center mt-10 md:mt-0">
+						<div className="flex flex-col items-center">
 							<div
 								key={index}
-								className="rounded-full h-[310px] w-[310px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
+								className="rounded-full h-[240px] w-[240px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
 							>
 								<img
 									src={member.image}
 									alt={member.name}
-									className="h-[280px] w-[280px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
+									className="h-[220px] w-[220px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
 								/>
 							</div>
 							<div className="text-center mt-4">
@@ -71,17 +71,17 @@ const TeamsPage = () => {
 				</div>
 			</div>
 			{/* Section 2 */}
-			<div className="flex flex-col items-center gap-10">
+			<div className="flex flex-col items-center gap-10 mt-10 md:mt-0">
 				{execom.slice(2, 4).map((member, index) => (
-					<div className="flex flex-col items-center mt-10 md:mt-0">
+					<div className="flex flex-col items-center">
 						<div
 							key={index}
-							className="rounded-full h-[310px] w-[310px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
+							className="rounded-full h-[240px] w-[240px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
 						>
 							<img
 								src={member.image}
 								alt={member.name}
-								className="h-[280px] w-[280px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
+								className="h-[220px] w-[220px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
 							/>
 						</div>
 						<div className="text-center mt-4">
@@ -92,17 +92,17 @@ const TeamsPage = () => {
 				))}
 			</div>
 			{/* Section 3 */}
-			<div className="flex flex-col items-center gap-10">
+			<div className="flex flex-col items-center gap-10 mt-10 md:mt-0">
 				{execom.slice(4, 6).map((member, index) => (
-					<div className="flex flex-col items-center mt-10 md:mt-0">
+					<div className="flex flex-col items-center">
 						<div
 							key={index}
-							className="rounded-full h-[310px] w-[310px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
+							className="rounded-full h-[240px] w-[240px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
 						>
 							<img
 								src={member.image}
 								alt={member.name}
-								className="h-[280px] w-[280px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
+								className="h-[220px] w-[220px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
 							/>
 						</div>
 						<div className="text-center mt-4">
@@ -113,17 +113,17 @@ const TeamsPage = () => {
 				))}
 			</div>
 			{/* Section 4 */}
-			<div className="flex flex-col items-center gap-10">
+			<div className="flex flex-col items-center gap-10 mt-10 md:mt-0">
 				{execom.slice(6, 8).map((member, index) => (
-					<div className="flex flex-col items-center mt-10 md:mt-0">
+					<div className="flex flex-col items-center">
 						<div
 							key={index}
-							className="rounded-full h-[310px] w-[310px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
+							className="rounded-full h-[240px] w-[240px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
 						>
 							<img
 								src={member.image}
 								alt={member.name}
-								className="h-[280px] w-[280px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
+								className="h-[220px] w-[220px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
 							/>
 						</div>
 						<div className="text-center mt-4">
