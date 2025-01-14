@@ -57,7 +57,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative h-auto w-screen flex gap-10 flex-col justify-end">
+    <div className="relative flex gap-10 flex-col justify-end">
       <GridPattern
         width={50}
         height={50}
