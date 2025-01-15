@@ -6,6 +6,7 @@ import EventsPage from "@/components/EventsPage";
 import TeamsPage from "@/components/TeamsPage";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { useEffect, useRef, useState } from "react";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +25,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  const scrollToSection = (section: "home" | "history" | "events" | "teams" | "footer" | "about") => {
+  const scrollToSection = (section: "home" | "history" | "events" | "teams" | "footer") => {
     switch (section) {
       case "home":
         heroRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -88,6 +89,7 @@ export default function Home() {
             </section>
           </div>
         </div>
+        <Footer scrollToSection={scrollToSection} />
       </div>
     </div>
   );
