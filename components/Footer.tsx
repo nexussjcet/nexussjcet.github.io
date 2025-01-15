@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { Github, Instagram, Twitter, Linkedin, Mail, ArrowUpCircle, Code2, Users, BookOpen, Youtube } from 'lucide-react'
-import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 
 interface FooterProps {
@@ -11,7 +10,7 @@ interface FooterProps {
 
 export default function Footer({ scrollToSection }: FooterProps) {
   return (
-    <footer className="w-full bg-black text-white py-12">
+    <footer className="w-full bg-black text-white py-12 mt-48">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex justify-end mb-12">
