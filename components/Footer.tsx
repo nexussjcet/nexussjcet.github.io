@@ -1,8 +1,6 @@
-'use client'
-
 import Link from 'next/link'
-import { Github, Instagram, Twitter, Linkedin, Mail, ArrowUpCircle, Code2, Users, BookOpen, Youtube } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import { Github, Instagram, Linkedin, ArrowUpCircle, Code2, Users, BookOpen, Youtube } from 'lucide-react'
 
 interface FooterProps {
   scrollToSection?: (section: "home" | "history" | "events" | "teams" | "footer") => void;
@@ -10,22 +8,9 @@ interface FooterProps {
 
 export default function Footer({ scrollToSection }: FooterProps) {
   return (
-    <footer className="w-full bg-black text-white py-12 mt-48">
+    <footer className="w-full bg-black text-white py-12 mt-64">
       <div className="container mx-auto px-4">
-        {/* Top Section */}
-        <div className="flex justify-end mb-12">
-          <Button
-            variant="ghost"
-            onClick={() => scrollToSection?.('home')}
-            className="text-white hover:text-black"
-          >
-            <span className="mr-2">Back to top</span>
-            <ArrowUpCircle className="w-5 h-5" />
-          </Button>
-        </div>
-
-        {/* Middle Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-6">
           {/* About Us */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold mb-4">About Us</h3>
@@ -135,17 +120,27 @@ export default function Footer({ scrollToSection }: FooterProps) {
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </div>
-            <div className="flex flex-row w-full gap-4 mt-4 px-2">
+            <div className="flex flex-row w-full gap-4 mt-4 mx-2 mb-4">
               <img className="w-20 h-auto object-cover select-none" src="/logo.svg" alt="Nexus Logo" />
               <img className="w-20 h-auto object-cover select-none" src="/sjcet-logo.webp" alt="SJCET Logo" />
+            </div>
+            <div className="flex flex-row w-full mx-2">
+              <Button
+                variant="ghost"
+                onClick={() => scrollToSection?.('home')}
+                className="text-white hover:text-black border-2 border-white "
+              >
+                <span className="mr-2">Back to top</span>
+                <ArrowUpCircle className="w-5 h-5" />
+              </Button>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="pt-2">
+        {/* Copyright Section */}
+        <div className="pt-0">
           <p className="text-gray-400 text-sm text-center">
-            Copyright © {new Date().getFullYear()} The Nexus Project. All rights reserved.
+            © {new Date().getFullYear()} The Nexus Project. All rights reserved.
           </p>
         </div>
       </div>
