@@ -46,9 +46,16 @@ const projects: Project[] = [
         name: "Insight",
         description: "Self Host-able AI enabled WhatsApp Agent",
         icon: Send,
-        color: "border-green-500 text-green-500",
+        color: "border-cyan-500 text-cyan-500",
         link: "https://github.com/rajatsandeepsen/insight"
-    }
+    },
+    {
+        name: 'Bootcamp Website',
+        description: 'Redesign new 10 year anniversary official website for IEDC SJCET',
+        icon: PanelTop,
+        color: 'border-green-500 text-green-500',
+        link: "https://github.com/IEDC-SJCET/IEDC"
+    },
 ];
 
 const projectIdeas: (Omit<Project, "link"> & { from: string })[] = [
