@@ -183,7 +183,7 @@ export default function Page() {
             <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8">
                 Want to be a maintainer? Let us know! (email: nexus@sjcetpalai.ac.in)
             </Link>
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col container">
                 <h1 className="text-xl font-bold">Frequently Asked Questions</h1>
                 <Accordion type="single" collapsible>
                     <AccordionItem value="1">
