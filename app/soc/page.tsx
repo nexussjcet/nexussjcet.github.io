@@ -48,7 +48,7 @@ const projects: Project[] = [
         icon: Send,
         color: "border-cyan-500 text-cyan-500",
         link: "https://github.com/rajatsandeepsen/insight"
-    }.
+    },
     {
         name: 'Bootcamp Website',
         description: 'Redesign new 10 year anniversary official website for IEDC SJCET',
