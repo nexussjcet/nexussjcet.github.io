@@ -1,12 +1,12 @@
 "use client";
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import History from "@/components/History";
 import EventsPage from "@/components/EventsPage";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import History from "@/components/History";
+import Navbar from "@/components/Navbar";
 import TeamsPage from "@/components/TeamsPage";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { useEffect, useRef, useState } from "react";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -63,7 +63,7 @@ export default function Home() {
         width={50}
         height={50}
         strokeDasharray="5,5"
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 -z-30"
       />
       {/* Navbar visible only on md screens and above */}
       <div className="hidden md:block w-1/4 mr-10">

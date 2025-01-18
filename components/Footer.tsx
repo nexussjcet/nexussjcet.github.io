@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { Github, Instagram, Linkedin, ArrowUpCircle, Code2, Users, BookOpen, Youtube } from 'lucide-react'
+import { ArrowUpCircle, BookOpen, Code2, Github, Instagram, Linkedin, Radio, Twitter, Users, Youtube } from 'lucide-react'
+import Link from 'next/link'
 
 interface FooterProps {
   scrollToSection?: (section: "home" | "history" | "events" | "teams" | "footer") => void;
@@ -38,11 +38,11 @@ export default function Footer({ scrollToSection }: FooterProps) {
                 <span>Documentation</span>
               </Link>
               <Link
-                href="/join"
+                href="https://whatsapp.com/channel/0029Vauc9wm1dAvvgjEos13l"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
               >
-                <Users className="w-4 h-4" />
-                <span>Join the Community</span>
+                <Radio className="w-4 h-4" />
+                <span>Bootcamp Whatsapp Channel</span>
               </Link>
               <Link
                 href="https://github.com/nexussjcet"
@@ -59,12 +59,14 @@ export default function Footer({ scrollToSection }: FooterProps) {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <nav className="space-y-3">
               <button
+                type="button"
                 onClick={() => scrollToSection?.('home')}
                 className="block text-gray-400 hover:text-white transition-colors"
               >
                 HOME
               </button>
               <button
+                type="button"
                 onClick={() => scrollToSection?.('teams')}
                 className="block text-gray-400 hover:text-white transition-colors"
               >
@@ -75,6 +77,9 @@ export default function Footer({ scrollToSection }: FooterProps) {
               </Link>
               <Link href="/fossday" className="block text-gray-400 hover:text-white transition-colors">
                 FOSSDAY
+              </Link>
+              <Link href="/soc" className="block text-gray-400 hover:text-white transition-colors">
+                Season of Commits
               </Link>
             </nav>
           </div>
@@ -119,6 +124,15 @@ export default function Footer({ scrollToSection }: FooterProps) {
                 <Linkedin className="w-6 h-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
+              <Link
+                href="https://x.com/nexussjcet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <Twitter className="w-6 h-6" />
+                <span className="sr-only">Twitter</span>
+              </Link>
             </div>
             <div className="flex flex-row w-full gap-4 mt-4 mx-2 mb-4">
               <img className="w-20 h-auto object-cover select-none" src="/logo.svg" alt="Nexus Logo" />
@@ -135,13 +149,6 @@ export default function Footer({ scrollToSection }: FooterProps) {
               </Button>
             </div>
           </div>
-        </div>
-
-        {/* Copyright Section */}
-        <div className="pt-0">
-          <p className="text-gray-400 text-sm text-center">
-            © {new Date().getFullYear()} The Nexus Project. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

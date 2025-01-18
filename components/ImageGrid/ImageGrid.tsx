@@ -29,7 +29,7 @@ const history: HistoryItem[] = [
         images: [
             '/history/mozilla_sjcet_logo.png',
         ],
-        date: '2013',
+        date: 'July 2013',
     },
     {
         id: 3,
@@ -52,11 +52,20 @@ const history: HistoryItem[] = [
     {
         id: 5,
         title: "The Nexus Project",
-        description: "The Nexus Project was established to unite and support FOSS-related activities at SJCET.",
+        description: "The Nexus Project was established to unite all open source software related activities at SJCET.",
         images: [
             '/history/the_nexus_project_logo.jpeg',
         ],
         date: 'Dec 2018',
+    },
+    {
+        id: 6,
+        title: "FOSS United",
+        description: "The Nexus Project joined as FOSS Club on FOSS United in 2024",
+        images: [
+            '/common/fossunited.svg',
+        ],
+        date: 'Dec 2024',
     },
 ];
 
@@ -70,7 +79,7 @@ interface ImageGridItemProps extends HistoryItem {
 // ImageGrid component
 const ImageGrid: React.FC = () => {
     return (
-        <div className="md:w-[90vw] w-full h-auto justify-center md:justify-end text-white flex flex-wrap ">
+        <div className="md:w-[100vw] w-full h-auto justify-center md:justify-end text-white flex flex-wrap ">
             {history.map((item) => (
                 <ImageGridItem key={item.id} {...item} isHovered={false} />
             ))}
@@ -84,7 +93,7 @@ const ImageGridItem: React.FC<ImageGridItemProps> = ({ title, description, image
 
     return (
         <div
-            className={`relative md:m-2 h-screen w-screen md:w-[15vw] flex-col md:flex-row transition-all duration-300 ease-in-out transform pointer-events-none md:pointer-events-auto ${
+            className={`relative md:m-2 h-screen w-screen md:w-[13vw] flex-col md:flex-row transition-all duration-300 ease-in-out transform pointer-events-none md:pointer-events-auto ${
                 isHovered ? "flex-grow" : "flex-shrink"
             } text-[#AAAAAA] font-bold text-2xl p-2`}
             onMouseEnter={() => setIsHovered(true)}
@@ -92,7 +101,7 @@ const ImageGridItem: React.FC<ImageGridItemProps> = ({ title, description, image
         >
         
             <div
-                className={`absolute h-full md:w-[15vw] inset-0 flex flex-col justify-between items-start ${isHovered ? "bg-transparent" : "md:bg-[#e1e1e1]"} p-4 transition-opacity duration-300 bg-transparent border-t-2 border-b-2 md:border-none `}
+                className={`absolute h-full md:w-[13vw] inset-0 flex flex-col justify-between items-start ${isHovered ? "bg-transparent" : "md:bg-[#e1e1e1]"} p-4 transition-opacity duration-300 bg-transparent border-t-2 border-b-2 md:border-none `}
             >
                 <div className={` text-center justify-between text-gray-400 h-full ${id % 2 === 0 ? "flex-col" : "flex-col-reverse"} ${isHovered ? "hidden" : "flex"}`}>
                     <h3 className="text-3xl md:text-3xl font-bold">{title}</h3>
