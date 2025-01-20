@@ -18,7 +18,7 @@ const TeamsPage = () => {
 			image: "/team/member2.webp",
 		},
 		{
-			name: "Tom Titus",
+			name: "Tims Tittus",
 			role: "Cyber Lead",
 			image: "/team/member3.webp",
 		},
