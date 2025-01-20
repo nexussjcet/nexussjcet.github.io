@@ -10,7 +10,7 @@ export default function Footer({ scrollToSection }: FooterProps) {
   return (
     <footer className="w-full bg-black text-white py-12 mt-64 border-t-2 border-slate-100">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[0.5vw] mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-[1vw] mb-6">
           {/* About Us */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold mb-4">About Us</h3>
