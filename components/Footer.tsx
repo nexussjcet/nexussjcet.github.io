@@ -8,9 +8,9 @@ interface FooterProps {
 
 export default function Footer({ scrollToSection }: FooterProps) {
   return (
-    <footer className="w-full bg-black text-white py-12 mt-64">
+    <footer className="w-full bg-black text-white py-12 mt-64 border-t-2 border-slate-100">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[0.5vw] mb-6">
           {/* About Us */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold mb-4">About Us</h3>
@@ -87,7 +87,7 @@ export default function Footer({ scrollToSection }: FooterProps) {
           {/* Connect With Us */}
           <div>
             <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-[0.5vw]">
               <Link
                 href="https://github.com/nexussjcet"
                 target="_blank"
