@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-import { BrainCircuit, CalendarDays, CheckCircle, CheckCircleIcon, FilePen, HardDrive, PanelTop, Send } from 'lucide-react';
+import { BrainCircuit, CalendarDays, CheckCircle, FilePen, HardDrive, PanelTop, Send, QrCode } from 'lucide-react';
 import type { LucideIcon } from "lucide-react";
 
 type Project = {
@@ -56,16 +56,16 @@ const projects: Project[] = [
         color: 'border-green-500 text-green-500',
         link: "https://github.com/IEDC-SJCET/IEDC"
     },
+    {
+        name: 'CertiFoolProof',
+        description: 'A platform to verify the authenticity of certificates issued by clubs of SJCET',
+        icon: QrCode,
+        color: 'border-red-500 text-red-500',
+        link: "https://github.com/TimsTittus/CertiFoolProof"
+    },
 ];
 
 const projectIdeas: (Omit<Project, "link"> & { from: string })[] = [
-    {
-        name: "Certificate Verification",
-        description: "A simple webpage for faculties to verify certificates issued by clubs of SJCET",
-        color: "border-red-500 text-red-500",
-        icon: CheckCircle,
-        from: "Bootcamp SJCET"
-    },
     {
         name: "G-Drive Web portal",
         description: "A structured organizational web portal to edit/write/access Google Drive files",
@@ -150,7 +150,7 @@ export default function Page() {
                         Some Project Ideas That <br /> You Can <span className="bg-green-400 px-2">Start Your Own</span> Right Now
                     </h1>
 
-                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
                         {projectIdeas.map((project) => {
                             const IconComponent = project.icon;
                             return (
