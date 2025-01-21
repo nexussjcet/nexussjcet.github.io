@@ -9,8 +9,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-import { BrainCircuit, CalendarDays, CheckCircle, CheckCircleIcon, FilePen, HardDrive, PanelTop, Send } from 'lucide-react';
+import { BrainCircuit, CalendarDays, FilePen, HardDrive, PanelTop, Send, QrCode } from 'lucide-react';
 import type { LucideIcon } from "lucide-react";
+
+export const metadata = {
+    title: "Season of Commits - Nexus Project",
+    description: "Season of Commits is a month-long celebration of open-source contributions. Whether you're an experienced developer, a beginner looking to make your first pull request, or someone with a project to share, this event provides resources, mentorship, and a collaborative environment to help you succeed.",
+}
 
 type Project = {
     name: string;
@@ -56,16 +61,16 @@ const projects: Project[] = [
         color: 'border-green-500 text-green-500',
         link: "https://github.com/IEDC-SJCET/IEDC"
     },
+    {
+        name: 'CertiFoolProof',
+        description: 'A platform to verify the authenticity of certificates issued by clubs of SJCET',
+        icon: QrCode,
+        color: 'border-red-500 text-red-500',
+        link: "https://github.com/TimsTittus/CertiFoolProof"
+    },
 ];
 
 const projectIdeas: (Omit<Project, "link"> & { from: string })[] = [
-    {
-        name: "Certificate Verification",
-        description: "A simple webpage for faculties to verify certificates issued by clubs of SJCET",
-        color: "border-red-500 text-red-500",
-        icon: CheckCircle,
-        from: "Bootcamp SJCET"
-    },
     {
         name: "G-Drive Web portal",
         description: "A structured organizational web portal to edit/write/access Google Drive files",
@@ -103,7 +108,7 @@ export default function Page() {
                 </Link>
             </div>
         </div>
-        <div className="flex flex-col gap-4 p-10 w-full bg-white text-black">
+        <div className="flex flex-col gap-4 p-5 md:p-10 w-full bg-white text-black">
             <div id="projects" />
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-gray-900 text-center mb-12">
@@ -150,7 +155,7 @@ export default function Page() {
                         Some Project Ideas That <br /> You Can <span className="bg-green-400 px-2">Start Your Own</span> Right Now
                     </h1>
 
-                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
                         {projectIdeas.map((project) => {
                             const IconComponent = project.icon;
                             return (
@@ -187,7 +192,7 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8">
+            <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8 mb-8">
                 Want to be a maintainer? Let us know! (email: nexus@sjcetpalai.ac.in)
             </Link>
             <div className="flex flex-col container">
