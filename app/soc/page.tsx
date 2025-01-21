@@ -9,8 +9,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-import { BrainCircuit, CalendarDays, CheckCircle, FilePen, HardDrive, PanelTop, Send, QrCode } from 'lucide-react';
+import { BrainCircuit, CalendarDays, FilePen, HardDrive, PanelTop, Send, QrCode } from 'lucide-react';
 import type { LucideIcon } from "lucide-react";
+
+export const metadata = {
+    title: "Season of Commits - Nexus Project",
+    description: "Season of Commits is a month-long celebration of open-source contributions. Whether you're an experienced developer, a beginner looking to make your first pull request, or someone with a project to share, this event provides resources, mentorship, and a collaborative environment to help you succeed.",
+}
 
 type Project = {
     name: string;
@@ -103,7 +108,7 @@ export default function Page() {
                 </Link>
             </div>
         </div>
-        <div className="flex flex-col gap-4 p-10 w-full bg-white text-black">
+        <div className="flex flex-col gap-4 p-5 md:p-10 w-full bg-white text-black">
             <div id="projects" />
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-gray-900 text-center mb-12">
@@ -187,7 +192,7 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8">
+            <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8 mb-8">
                 Want to be a maintainer? Let us know! (email: nexus@sjcetpalai.ac.in)
             </Link>
             <div className="flex flex-col container">
