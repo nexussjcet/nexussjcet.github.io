@@ -59,7 +59,7 @@ const projects: Project[] = [
         description: 'Redesign new 10 year anniversary official website for IEDC SJCET',
         icon: PanelTop,
         color: 'border-green-500 text-green-500',
-        link: "https://github.com/IEDC-SJCET/IEDC"
+        link: "https://github.com/IEDC-SJCET/IEDC-SJCET.github.io"
     },
     {
         name: 'CertiFoolProof',
@@ -68,6 +68,13 @@ const projects: Project[] = [
         color: 'border-red-500 text-red-500',
         link: "https://github.com/TimsTittus/CertiFoolProof"
     },
+    {
+        name: "Duty Leave Generator",
+        description: "An AI enabled tool to automate the duty leave documentation process of SJCET",
+        color: "border-pink-500 text-pink-500",
+        icon: FilePen,
+        link: "https://github.com/IEDC-SJCET/dutyfree"
+    }
 ];
 
 const projectIdeas: (Omit<Project, "link"> & { from: string })[] = [
@@ -77,15 +84,7 @@ const projectIdeas: (Omit<Project, "link"> & { from: string })[] = [
         color: "border-yellow-500 text-yellow-500",
         icon: HardDrive,
         from: "A Faculty of SJCET"
-    },
-    {
-        name: "Duty Leave Generator",
-        description: "An AI enabled tool to automate the duty leave documentation process of SJCET",
-        color: "border-pink-500 text-pink-500",
-        icon: FilePen,
-        from: "A Student of SJCET"
-    },
-
+    }
 ]
 
 export default function Page() {
