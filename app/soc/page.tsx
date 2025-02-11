@@ -189,6 +189,19 @@ export default function Page() {
                             );
                         })}
                     </div>
+                    
+                </div>
+                <div className="max-w-4xl mx-auto ">
+                    <h1 className="text-5xl font-bold text-gray-900 text-center my-12">
+                        The <span className="bg-green-400 px-2">Winners</span>
+                    </h1>
+
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+                        <img src={"/soc/DeonThomas.webp"} alt="DeonThomas, first" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out"/>
+                        <img src={"/soc/JoeGeorge.webp"} alt="JoeGeorge, second" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out"/>
+                        <img src={"/soc/AbhijithS.webp"} alt="Abhijith S, third" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out "/>
+                    </div>
+                    
                 </div>
             </div>
             <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8 mb-8">
