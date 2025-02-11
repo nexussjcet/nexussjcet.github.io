@@ -193,11 +193,20 @@ export default function Page() {
         </div>
         <div className="flex flex-col gap-4 p-5 md:p-10 w-full bg-white text-black">
             <div id="projects" />
+            <div className="max-w-4xl mx-auto mb-12">
+                <h1 className="text-4xl font-bold text-gray-900 text-center">
+                    The <span className="bg-green-400 px-2">Winners</span>
+                </h1>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
+                    <img src={"/soc/DeonThomas.webp"} alt="DeonThomas, first" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out md:col-span-2 lg:col-span-1" />
+                    <img src={"/soc/JoeGeorge.webp"} alt="JoeGeorge, second" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out" />
+                    <img src={"/soc/AbhijithS.webp"} alt="Abhijith S, third" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out" />
+                </div>
+            </div>
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-gray-900 text-center mb-12">
                     Projects You Can <span className="bg-green-400 px-2">Contribute</span> To
                 </h1>
-
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => {
                         const IconComponent = project.icon;
@@ -221,7 +230,6 @@ export default function Page() {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 ">
                                     <Link href={project.link}>
                                         <button type="button" className="font-medium text-blue-600 text-sm hover:text-blue-800">
@@ -237,7 +245,6 @@ export default function Page() {
                     <h1 className="text-3xl font-bold text-gray-900 text-center my-12">
                         Some Project Ideas That <br /> You Can <span className="bg-green-400 px-2">Start Your Own</span> Right Now
                     </h1>
-
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
                         {projectIdeas.map((project) => {
                             const IconComponent = project.icon;
@@ -273,19 +280,6 @@ export default function Page() {
                             );
                         })}
                     </div>
-                    
-                </div>
-                <div className="max-w-4xl mx-auto ">
-                    <h1 className="text-5xl font-bold text-gray-900 text-center my-12">
-                        The <span className="bg-green-400 px-2">Winners</span>
-                    </h1>
-
-                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-                        <img src={"/soc/DeonThomas.webp"} alt="DeonThomas, first" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out"/>
-                        <img src={"/soc/JoeGeorge.webp"} alt="JoeGeorge, second" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out"/>
-                        <img src={"/soc/AbhijithS.webp"} alt="Abhijith S, third" className="rounded-2xl shadow-md hover:shadow-xl transition-shadow border hover:border-4 hover:border-green-400 duration-300 ease-in-out "/>
-                    </div>
-                    
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center w-full my-16">
