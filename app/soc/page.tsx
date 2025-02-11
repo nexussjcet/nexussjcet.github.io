@@ -3,14 +3,25 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button";
 
 import Image from "next/image";
 import Link from "next/link";
 
-import { BrainCircuit, CalendarDays, FilePen, HardDrive, PanelTop, Send, QrCode } from 'lucide-react';
+import { BrainCircuit, CalendarDays, FilePen, HardDrive, PanelTop, Send, QrCode, Github } from 'lucide-react';
 import type { LucideIcon } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { CustomGithubCalendar } from "@/components/soc/github-calendar";
 
 export const metadata = {
     title: "Season of Commits - Nexus Project",
@@ -86,6 +97,79 @@ const projectIdeas: (Omit<Project, "link"> & { from: string })[] = [
         from: "A Faculty of SJCET"
     }
 ]
+
+const contributors: { username: string, name: string, avatar: string, url: string, projects: string[] }[] = [
+    {
+        username: "aravind-manoj",
+        name: "Aravind Manoj",
+        avatar: "https://avatars.githubusercontent.com/u/136658800?v=4",
+        url: "https://github.com/aravind-manoj",
+        projects: ["Nexus Spaces", "Nexus Website"],
+    },
+    {
+        username: "Milansuman",
+        name: "Milan Suman",
+        avatar: "https://avatars.githubusercontent.com/u/38901868?v=4",
+        url: "https://github.com/Milansuman",
+        projects: ["Nexus Spaces", "Nexus Website"],
+    },
+    {
+        username: "DTS-11",
+        name: "Deon Thomas",
+        avatar: "https://avatars.githubusercontent.com/u/76153100?v=4",
+        url: "https://github.com/DTS-11",
+        projects: ["Nexus Spaces"]
+    },
+    {
+        username: "joegeorge022",
+        name: "Joe George",
+        avatar: "https://avatars.githubusercontent.com/u/127773439?v=4",
+        url: "https://github.com/joegeorge022",
+        projects: ["Nexus Spaces", "SJCET Events"],
+    },
+    {
+        username: "abhips2005",
+        name: "Abhijith S",
+        avatar: "https://avatars.githubusercontent.com/u/183483087?v=4",
+        url: "https://github.com/abhips2005",
+        projects: ["DutyFree"],
+    },
+    {
+        username: "alvin-dennis",
+        name: "Alvin Dennis",
+        avatar: "https://avatars.githubusercontent.com/u/134829236?v=4",
+        url: "https://github.com/alvin-dennis",
+        projects: ["SJCET Events", "G-Drive Portal"],
+    },
+    {
+        username: "abin-karukappallil",
+        name: "Abin Thomas",
+        avatar: "https://avatars.githubusercontent.com/u/73917119?v=4",
+        url: "https://github.com/abin-karukappallil",
+        projects: ["Nexus Spaces", "Nexus Website", "SJCET Events"],
+    },
+    {
+        username: "TimsTittus",
+        name: "Tims Tittus",
+        avatar: "https://avatars.githubusercontent.com/u/151863700?v=4",
+        url: "https://github.com/TimsTittus",
+        projects: ["CertiFoolProof", "Nexus Spaces", "SJCET Events"],
+    },
+    {
+        username: "josehp304",
+        name: "Joseph Babu",
+        avatar: "https://avatars.githubusercontent.com/u/83821474?v=4",
+        url: "https://github.com/josehp304",
+        projects: ["Nexus Spaces", "Nexus Website"],
+    },
+    {
+        username: "Blesson-Tomy",
+        name: "Blesson K Tomy",
+        avatar: "https://avatars.githubusercontent.com/u/116932677?v=4",
+        url: "https://github.com/Blesson-Tomy",
+        projects: ["Nexus Spaces"],
+    },
+];
 
 export default function Page() {
     return <div className="w-full min-h-screen flex flex-col text-white scroll-smooth">
@@ -191,7 +275,51 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mt-8 mb-8">
+            <div className="flex flex-col justify-center items-center w-full my-16">
+                <h1 className="text-3xl font-bold text-gray-900 text-center m-12">
+                    The <span className="bg-green-400 px-2">Contributors</span>
+                </h1>
+                <Carousel className="w-[80%] max-w-5xl justify-center items-center">
+                    <CarouselContent>
+                        {contributors.map((contributor, index) => (
+                            <CarouselItem className="min-[1024px]:basis-1/2 min-[1375px]:basis-1/3 overflow-hidden select-none" key={index}>
+                                <Card>
+                                    <CardContent className="flex flex-col items-center justify-center p-2 md:p-6 h-[28rem]">
+                                        <Avatar className="w-20 h-20 mb-4">
+                                            <AvatarImage src={contributor.avatar} alt={contributor.name} />
+                                            <AvatarFallback>{contributor.name.charAt(0)}</AvatarFallback>
+                                        </Avatar>
+                                        <span className="text-2xl font-semibold mb-2">{contributor.name}</span>
+                                        <Separator className="my-4" />
+                                        <div className="flex w-full mb-4">
+                                            <div className="flex-1">
+                                                <h4 className="text-sm font-semibold mb-1 text-center w-full underline">Active Projects</h4>
+                                                <div className="flex justify-center">
+                                                    <ul className="text-sm">
+                                                        {contributor.projects.map((project, idx) => (
+                                                            <li key={idx}>▸ {project}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <Separator orientation="vertical" className="mx-4" />
+                                            <CustomGithubCalendar contributor={contributor} />
+                                        </div>
+                                        <Button variant="outline" className="mt-2" asChild>
+                                            <Link href={contributor.url} target="_blank" rel="noopener noreferrer">
+                                                <Github className="mr-2 h-4 w-4" /> GitHub Profile
+                                            </Link>
+                                        </Button>
+                                    </CardContent>
+                                </Card>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
+            </div>
+            <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mb-8">
                 Want to be a maintainer? Let us know! (email: nexus@sjcetpalai.ac.in)
             </Link>
             <div className="flex flex-col container">
