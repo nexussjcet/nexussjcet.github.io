@@ -194,7 +194,7 @@ export default function Page() {
         <div className="flex flex-col gap-4 p-5 md:p-10 w-full bg-white text-black">
             <div id="projects" />
             <div className="max-w-4xl mx-auto mb-12">
-                <h1 className="text-4xl font-bold text-gray-900 text-center">
+                <h1 className="text-3xl font-bold text-gray-900 text-center">
                     The <span className="bg-green-400 px-2">Winners</span>
                 </h1>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
@@ -282,8 +282,8 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center w-full my-16">
-                <h1 className="text-3xl font-bold text-gray-900 text-center m-12">
+            <div className="flex flex-col justify-center items-center w-full">
+                <h1 className="text-3xl font-bold text-gray-900 text-center w-full my-12">
                     The <span className="bg-green-400 px-2">Contributors</span>
                 </h1>
                 <Carousel className="w-[80%] max-w-5xl justify-center items-center">
@@ -326,7 +326,7 @@ export default function Page() {
                     <CarouselNext />
                 </Carousel>
             </div>
-            <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center mb-8">
+            <Link href="mailto:nexus@sjcetpalai.ac.in" className="underline block text-center my-8">
                 Want to be a maintainer? Let us know! (email: nexus@sjcetpalai.ac.in)
             </Link>
             <div className="flex flex-col container">
