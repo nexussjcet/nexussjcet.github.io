@@ -5,6 +5,7 @@ const fileName = "./next.config.js";
 const config = {
 	pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 	output: "export",
+	trailingSlash: true
 };
 
 const mod = await loadFile(fileName);
