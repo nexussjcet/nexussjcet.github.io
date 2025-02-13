@@ -10,6 +10,7 @@ import { withMDX } from "./lib/mdx.js";
 export default withMDX({
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "export",
+  trailingSlash: true,
   images: {
     unoptimized: true
   }
