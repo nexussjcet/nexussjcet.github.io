@@ -42,6 +42,16 @@ const TeamsPage = () => {
 			role: "Frontend Dev",
 			image: "/team/member7.webp",
 		},
+		{
+			name: "Deon Thomas",
+			role: "AI Developer",
+			image: "/team/deon.jpeg"
+		},
+		{
+			name: "Joe George",
+			role: "Frontend Developer",
+			image: "/team/joe.jpeg"
+		}
 	];
 
 	return (
