@@ -45,12 +45,12 @@ const TeamsPage = () => {
 		{
 			name: "Deon Thomas",
 			role: "AI Developer",
-			image: "/team/deon.jpeg"
+			image: "/team/Deonthomas.webp"
 		},
 		{
 			name: "Joe George",
 			role: "Frontend Developer",
-			image: "/team/joe.jpeg"
+			image: "/team/joegeorge.webp"
 		}
 	];
 
