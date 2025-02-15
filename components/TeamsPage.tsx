@@ -143,6 +143,27 @@ const TeamsPage = () => {
 					</div>
 				))}
 			</div>
+			{/* Section 4 */}
+			<div className="flex flex-col items-center gap-10 mt-10 md:mt-0">
+				{execom.slice(8, 10).map((member, index) => (
+					<div className="flex flex-col items-center">
+						<div
+							key={index}
+							className="rounded-full h-[240px] w-[240px] md:h-[12vw] md:w-[12vw] md:max-h-[296px] md:max-w-[296px] bg-white flex justify-center items-center"
+						>
+							<img
+								src={member.image}
+								alt={member.name}
+								className="h-[220px] w-[220px] md:h-[11vw] md:w-[11vw] md:max-h-[280px] md:max-w-[280px] object-cover rounded-full"
+							/>
+						</div>
+						<div className="text-center mt-4">
+							<h1 className="text-xl md:text-sm lg:text-xl font-bold text-white">{member.name}</h1>
+							<p className="text-lg md:text-sm lg:text-lg text-white">{member.role}</p>
+						</div>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };
