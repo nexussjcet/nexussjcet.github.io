@@ -44,12 +44,12 @@ export default function RegisterPage() {
 					prove you're an{" "}
 					<span className="underline decoration-white">engineer</span>.
 				</Text>
-				<Link href={"/projects/submit"}>
-					<Button className="scale-150 mt-10" variant={"projects"}>
-						<span className="text-lg">showcase your work</span>
-						<ChevronRight />
-					</Button>
-				</Link>
+				<Link href="/projects/submit">
+      				<Button className="scale-150 mt-10" variant="projects">
+        				<span className="text-lg">Showcase Your Work</span>
+        				<ChevronRight />
+      				</Button>
+    			</Link>
 			</div>
 			<div className="flex flex-wrap justify-center sm:justify-between items-center mt-8 sm:mt-0 w-full sm:w-3/4 gap-4">
 				{communityLogos.map((community) => (
