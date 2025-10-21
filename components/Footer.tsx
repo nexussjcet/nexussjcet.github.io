@@ -75,6 +75,9 @@ export default function Footer({ scrollToSection }: FooterProps) {
               <Link href="/history" className="block text-gray-400 hover:text-white transition-colors">
                 HISTORY
               </Link>
+              <Link href="/projects" className="block text-gray-400 hover:text-white transition-colors">
+                Project Of The Week
+              </Link>
               <Link href="/fossday" className="block text-gray-400 hover:text-white transition-colors">
                 FOSSDAY
               </Link>

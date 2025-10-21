@@ -1,6 +1,6 @@
 "use client";
 
-import { PrevProjectOfTheWeek } from "@/components/projects/pages/PrevProjectOfTheWeek";
+import PrevProjectOfTheWeek from "@/components/projects/pages/PrevProjectOfTheWeek";
 import ProjectOfTheWeek  from "@/components/projects/pages/ProjectOfTheWeek";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,15 +11,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const sampleProject = {
-	title: "Thekkummoottil Advanced Auth Solutions",
-	image: "/projects/demoproject.jpg?height=400&width=600&text=AI+Chat+App",
-	deployedUrl: "https://www.youtube.com/watch?v=GzeAQlSxVvc",
-	description: "You have an app, but no secure authentication? You have a smartphone, but no secure authentication? I have ready for you. For the last 4 years, we have been serving the tech community in SJCET.We have several dedicated employees working 24 hours a day. We use technology. We have computer background staff. From the non-tech community to tech communities, we have 100% customer satisfaction. Reliable and dependable services, all over the united SJCET. Satisfaction guaranteed and definitely.",
+	title: "Custom Sim Racing Wheel",
+	image: "/projects/simracingwheel.jpeg?height=400&width=600&text=AI+Chat+App",
+	deployedUrl: "https://youtu.be/9gVcIS82tu4",
+	description: "The direct drive wheel uses a 6.5-inch hoverboard motor with an Odec V4.2 controller flashed with FFBeast firmware, allowing force feedback and features to be tuned via FFBeast software. Wheel position is read with a 2000 PPR rotary encoder connected through a GT2 belt, powered by a 24V 20A PSU via XT60 connectors. Pedals, handbrake, and buttons connect to an Arduino Leonardo running a basic sketch for EMC Pro software support. The PC detects them as separate controllers, compatible with most sim titles like Assetto Corsa, iRacing, and F1.",
 	author: {
-	  name: "Awindsr",
-	  githubUsername: "awindsr"
+	  name: "Siva Gireesh",
+	  githubUsername: "Siva2077",
+	  linkedinUsername: "siva-gireesh-244b7b2a0"
 	},
-	technologies: ["Next.js", "React", "TypeScript", "OpenAI API", "Tailwind CSS"],
+	technologies: ["FFBeast wheel firmware", "Odesc V 4.2 Motor Controller 24v", "6.5 inch Hoverboard motor 36v with 25mm magnets", "2000 PPR Incremental Rotary Encoder", "24v 20a PSU 480w", "Arduino Leonardo", "10k ohm Potentiometers"],
 	rating: 5
   };
 
@@ -297,16 +298,17 @@ export default function Page(){
 			<div className="relative h-screen flex flex-col justify-center items-center" ref={heroRef} >
 				<div className="flex flex-col pt-20 md:pt-0">
 					<Image src="/projects/nexus.webp" width={100} height={100} alt="nexus" className="w-14"/>
-					<h1 className="text-[40px] font-bold text-white opacity-80 md:text-6xl">project of the week</h1>
+					<h1 className="text-[40px] font-bold text-white opacity-80 md:text-6xl">Project Of The Week</h1>
 				</div>
-				<a href="/projects/submit" className="relative bg-gradient-to-b from-neutral-700 to-black text-white px-4 p-2 rounded-full z-50">showcase your project!</a>
-			</div>
-			<div className="py-6 z-50 bg-neutral-100 min-h-screen flex justify-center items-center">
+					<a href="/projects/submit" className="relative bg-gradient-to-b from-neutral-700 to-black text-white px-4 p-2 rounded-full z-50">showcase your project!</a>
+				</div>
+			<div className="py-6 z-50 bg-neutral-100 min-h-screen flex flex-col justify-center items-center">
+				<h1 className="text-4xl font-bold mb-6 text-center text-black">Project Of The Week - 13/09/25</h1>
 				{/* <ProjectOfTheWeek/> */}
 				<ProjectOfTheWeek project={sampleProject}/>
 			</div>
 			<div className="py-6 z-50 bg-neutral-100">
-				<PrevProjectOfTheWeek/>
+  				<PrevProjectOfTheWeek />
 			</div>
 		</div>
 	)

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { getGithubAvatar } from "@/lib/github"
 import { Github, Star } from 'lucide-react'
+import { Linkedin } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from 'react'
@@ -21,6 +22,7 @@ interface Project {
   author: {
     name: string
     githubUsername: string
+    linkedinUsername: string
   }
   technologies: string[]
   rating: number
@@ -87,15 +89,27 @@ export default function ProjectOfTheWeek({ project }: ProjectOfTheWeekProps) {
                 </div>
                 <h3 className="font-medium leading-none">{author.name}</h3>
               </div>
-              <Link
-                href={`https://github.com/${author.githubUsername}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition-colors"
-              >
-                <Github className="w-4 h-4" />
-                <span>{author.githubUsername}</span>
-              </Link>
+              <div className="flex gap-2">
+                <Link
+                  href={`https://github.com/${author.githubUsername}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>{author.githubUsername}</span>
+                </Link>
+      
+                <Link
+                  href={`https://www.linkedin.com/in/${author.linkedinUsername}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span>{author.linkedinUsername}</span>
+                </Link>
+            </div>
             </div>
 
             {/* Tech Stack Tags */}
