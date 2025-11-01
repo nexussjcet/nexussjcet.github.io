@@ -38,7 +38,7 @@ export default function ProductHuntLanding() {
 					<div className="flex justify-center items-center pt-8">
 						<a href="/sjcet-product-hunt/register">
 							<button className="group px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg shadow-orange-500/50 hover:shadow-orange-500/70">
-								Get Started
+							Help Us Build It
 								<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
 							</button>
 						</a>
